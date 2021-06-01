@@ -1,161 +1,147 @@
 "use strict";
 
+const Hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-const Hours= ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-
-console.log(Hours);
-
-let StoreTable = document.getElementById('Cookies-Table');
-
-
-
-
-
-
+let  StoreTable = document.getElementById("Cookies-Table");
+let table = document.createElement("table");
+StoreTable.appendChild(table);
 
 const Markets = [];
 
 
+function LOCATION(City, Min, Max, Avg) {
+  
+  this.City = City;
+  this.Min = Min;
+  this.Max = Max;
+  this.Avg = Avg;
+  this.Total  = 0;
+  
+  this.cusPerhour  = [];
+  this.cookperHour   = [];
+  Markets.push(this);
+  console.log(this);
+}
 
-function LOCATION(City, Min, Max, avg){
-
-    this.City = City;
-    this.Min = Min;
-    this.Max = Max;
-    this.avg = avg;
-    this.Total = 0;
-    this.CustomerPerHour = [];
-    this.CookiesPerHour = [];
-
-    Markets.push(this);
-    console.log(this);
-
-
-    LOCATION.prototype.CustomersPerHour = function () {
+LOCATION.prototype.customerperHour = function () {
   for (let i = 0; i < Hours.length; i++) {
-    let random = Math.floor(Math.random() * (this.Max - this.Min) + this.Min);
-    this.CustomerPerHour.push(random);
+    let random = Math.floor(Math.random() * (this.Max - this.Min) +this.Min);
+    this.cusPerhour.push(random);
   }
-
 };
 
-LOCATION.prototype.CookiesCount = function () { 
+LOCATION.prototype.CookiesCount  = function () { 
   for (let i = 0; i < Hours.length; i++) {
-    let Cookies = this.avg * this.CustomerPerHour[i];
-    this.CookiesPerHour.push(Math.ceil(Cookies));
+    let Cookies  = this.Avg * this.cusPerhour[i];
+    this.cookperHour.push(Math.ceil( Cookies ));
   }
 };
 
 LOCATION.prototype.setTotalCookies = function () {
-  for (let i = 0; i < this.CookiesPerHour.length; i++) {
-    this.Total = this.Total + this.CookiesPerHour[i];
-   
+  for (let i = 0; i < this.cookperHour.length; i++) {
+    this.Total = this.Total + this.cookperHour[i];
   }
   return this.Total;
 };
 
-LOCATION.prototype.HTMLDOC = function(){
-  let trelment = document.createElement('tr');
-  let tdelment = document.createElement('td');
-  tdelment.textContent = this.City;
-  trelment.appendChild(tdelment);
-  //trelment.textContent = Hours;
-  //tdelment.appendChild(trelment);
-  let headingRow = document.createElement('tr');
-  StoreTable.appendChild(headingRow);
-  let th1 = ' ';
-  th1 = document.createElement('th');
-  headingRow.appendChild(th1);
-  for (let i = 0; i < Hours.length; i++) {
-     th1 = document.createElement('th');
-     headingRow.appendChild(th1);
-     th1.textContent = `${Hours[i]}`;
-     //   console.log(thElement);
-  //th1.textContent = 'Daily location total';
+let tr = document.createElement("tr");
+table.appendChild(tr);
+let th = document.createElement("th");
+tr.appendChild(th);
+
+for (let i = 0; i < Hours.length; i++) {
+  let th = document.createElement("th");
+  tr.appendChild(th);
+  th.textContent = Hours[i];
 }
 
-  for (let i = 0 ; i < this.CookiesPerHour.length ; i++){
-  let tdelment = document.createElement('td');
-  tdelment.textContent = this.CookiesPerHour[i];
-  trelment.appendChild(tdelment);
- }
- tdelment = document.createElement('td');
- tdelment.textContent = this.Total;
- trelment.appendChild(tdelment);
+let total  = document.createElement("th");
+tr.appendChild(total );
+total .textContent = "Daily Location Total ";
 
- StoreTable.appendChild(trelment);
- 
-}
+LOCATION.prototype.HTMLDOC  = function () {
+  let tr1 = document.createElement("tr");
+  table.appendChild(tr1);
+  tr1.textContent = this.City;
 
+  let td;
+  for (let i = 0; i < this.cookperHour.length; i++) {
+    td = document.createElement("td");
+    tr1.appendChild(td);
+    td.textContent = this.cookperHour[i];
+  }
 
+  let tdsum = document.createElement("td");
+  tr1.appendChild(tdsum);
+  tdsum.textContent = this.Total;
 }
 
 
-const  Seattle = new LOCATION("Seattle",23,65, 6.3);
-Seattle.CustomersPerHour();
+
+const Seattle = new LOCATION("Seattle",23,65,6.3);//min,max,avg
+Seattle.customerperHour();
 Seattle.CookiesCount();
 Seattle.setTotalCookies();
 Seattle.HTMLDOC();
 
-const  Tokyo = new LOCATION("Tokyo", 3 , 24 , 1.2);
-Tokyo.CustomersPerHour();
+
+const Tokyo = new LOCATION("Tokyo",3,24,1.2);
+Tokyo.customerperHour();
 Tokyo.CookiesCount();
 Tokyo.setTotalCookies();
 Tokyo.HTMLDOC();
 
-const  Dubai = new LOCATION("Dubai", 11, 38,3.7);
-Dubai.CustomersPerHour();
+
+const Dubai = new LOCATION("Dubai",11,38,3.7);
+Dubai.customerperHour();
 Dubai.CookiesCount();
 Dubai.setTotalCookies();
 Dubai.HTMLDOC();
 
-
-
-const  Paris = new LOCATION("Paris", 20,38,2.3 );
-Paris.CustomersPerHour();
+const Paris = new LOCATION("Paris",20,38,2.3);
+Paris.customerperHour();
 Paris.CookiesCount();
 Paris.setTotalCookies();
 Paris.HTMLDOC();
 
-const  Lima = new LOCATION("Lima",2,16,4.6 );
-Lima.CustomersPerHour();
+const Lima = new LOCATION("Lima",2,16,4.6 );
+Lima.customerperHour();
 Lima.CookiesCount();
 Lima.setTotalCookies();
 Lima.HTMLDOC();
 
-let CITIES=[Seattle,Tokyo,Dubai,Paris,Lima];
 
-total();
+let Cities=[Seattle,Tokyo,Dubai,Paris,Lima];
 
-function total () {
+Totalfooter();
+
+function Totalfooter() {
 let trTotal = document.createElement("tr");
-StoreTable.appendChild(trTotal);
+table.appendChild(trTotal);
 trTotal.textContent = "Total";
-
 
 let grandSum = 0 ;
 let summationPerour ;
 let td ;
-for (let i=0 ; i< Hours.length ; i++){
+for (let i=0 ; i<Hours.length ; i++){
   summationPerour = 0
-  
-  for (let j =0 ; j< CITIES.length ; j++){
-    summationPerour = summationPerour + CITIES[j].CookiesPerHour[i]
+  for (let j =0 ; j< Cities.length ; j++){
+    summationPerour = summationPerour + Cities[j].cookperHour[i]
 
   }
-
   td = document.createElement('td');
-  StoreTable.appendChild(td);
+  trTotal.appendChild(td);
   td.textContent = summationPerour
 
    grandSum += summationPerour
 }
 
 td = document.createElement('td') ;
-StoreTable.appendChild(td);
-td.textContent=grandSum;
+trTotal.appendChild(td);
+td.textContent=grandSum
 
 }
+
 
 /*
 
