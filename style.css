@@ -1,0 +1,70 @@
+body{
+    background-color: wheat;
+}
+
+table,th,td,tr,article{
+     
+    border:solid rgb(66, 113, 175) 8px;
+    border-collapse: collapse;
+   width: 100%;
+   text-align: center;
+   text-size-adjust:inherit;
+}
+
+h1{
+    color: rgb(23, 23, 150);
+    text-align: center;
+    font-size:  400%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.logo{
+    margin-left:30%;
+    width: 450px;
+    height: 250px;
+}
+
+
+p,a{
+   
+    color: darkgreen;
+    margin-left: 0%;
+    font-size: 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+.A img{
+    width: 35%;
+    height: 200px;
+    float: right;
+
+}
+
+.B img{
+
+    width: 180px;
+    height: 200px;
+    float: left;
+ 
+}
+
+.C img{
+
+    width: 180px;
+    height: 150px;
+    margin-left: 30%;
+    
+}
+
+
+
+P,footer {
+
+    color: rgb(100, 0, 100);
+    font-size: 200%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: bold;
+    text-align: center;
+
+}

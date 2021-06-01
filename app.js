@@ -57,7 +57,7 @@ for (let i = 0; i < Hours.length; i++) {
 
 let total  = document.createElement("th");
 tr.appendChild(total );
-total .textContent = "Daily Location Total ";
+total .textContent = " Daily Location Total ";
 
 LOCATION.prototype.HTMLDOC  = function () {
   let tr1 = document.createElement("tr");
