@@ -5,7 +5,16 @@ const Hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm',
 let  StoreTable = document.getElementById("Cookies-Table");
 let table = document.createElement("table");
 StoreTable.appendChild(table);
+let tr = document.createElement("tr");
+table.appendChild(tr);
+let th = document.createElement("th");
+tr.appendChild(th);
 
+for (let i = 0; i < Hours.length; i++) {
+  let th = document.createElement("th");
+  tr.appendChild(th);
+  th.textContent = Hours[i];
+}
 const Markets = [];
 
 
@@ -43,17 +52,6 @@ LOCATION.prototype.setTotalCookies = function () {
   }
   return this.Total;
 };
-
-let tr = document.createElement("tr");
-table.appendChild(tr);
-let th = document.createElement("th");
-tr.appendChild(th);
-
-for (let i = 0; i < Hours.length; i++) {
-  let th = document.createElement("th");
-  tr.appendChild(th);
-  th.textContent = Hours[i];
-}
 
 let total  = document.createElement("th");
 tr.appendChild(total );
