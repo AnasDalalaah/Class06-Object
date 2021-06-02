@@ -19,11 +19,51 @@ h1{
 }
 
 .logo{
-    margin-left:30%;
+    margin-left:32%;
     width: 450px;
     height: 250px;
+    
 }
 
+#Branches{
+
+    text-align:left;
+    font-size:  300%;
+    color: rgb(72, 182, 21);
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+#Hours{
+    border: 1px solid black;
+
+margin-bottom: 90px;
+    text-align:center;
+    font-size: 150%;
+    color: rgb(72, 182, 21);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Cities{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+
+}
+
+.Cities li{
+    display: inline-block;
+    font-size:  150%;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 22px;
+
+}
+.Cities li:hover{
+    color: rgb(189, 25, 13);
+    background-color: cornflowerblue;
+
+}
 
 p,a{
    
@@ -35,34 +75,41 @@ p,a{
 }
 
 .A img{
-    width: 35%;
-    height: 200px;
+    width: 90px;
+    height: 120px;
     float: right;
 
 }
 
 .B img{
 
-    width: 180px;
-    height: 200px;
+    width: 90px;
+    height: 150px;
     float: left;
  
 }
 
 .C img{
 
-    width: 180px;
-    height: 150px;
-    margin-left: 30%;
+    width: 120px;
+    height: 120px;
+    margin-left: 32%;
     
 }
 
+footer {
 
+    padding: 60px;
+    background: rgb(235, 225, 225);
+    margin-top: 25px;
+    
+
+  }
 
 P,footer {
 
     color: rgb(100, 0, 100);
-    font-size: 200%;
+    font-size: 150%;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-style: bold;
     text-align: center;
