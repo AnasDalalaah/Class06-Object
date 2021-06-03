@@ -115,3 +115,7 @@ P,footer {
     text-align: center;
 
 }
+label{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
