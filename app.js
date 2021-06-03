@@ -146,7 +146,7 @@ Lima.hTMLDOC();
 footer();
 
 let form = document.getElementById('CookiesForm');
-form.addEventListener('Submit', creatnewElement);
+form.addEventListener('submit', creatnewElement);
 function creatnewElement(event) {
   event.preventDefault();
   console.log(event);
@@ -165,7 +165,7 @@ function creatnewElement(event) {
   console.log(NewElement);
   NewElement.customerperHour();
   NewElement.cookiesCount();
-  NewElement.count();
+  //NewElement.count();
   NewElement.setTotalCookies();
   FR.textContent='';
   NewElement.hTMLDOC();
