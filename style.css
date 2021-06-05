@@ -1,23 +1,55 @@
-body{
-    background-color: wheat;
+
+body.Sales{
+
+    background-image: url(https://www.pixeden.com/media/k2/galleries/220/003-wood-melamine-subttle-pattern-background-pat.jpg);
+}
+
+body.MAIN {
+    background-image: url(https://thumbs.dreamstime.com/b/hand-drawn-vector-seamless-fast-food-pattern-sketch-doodle-elements-can-be-used-wallpaper-website-background-wrapping-79399747.jpg);
+    height: 100%; 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Sales{
+text-align: center;
+color: darkseagreen;
+font-size: 50px;
 }
 
 table,th,td,tr,article{
      
-    border:solid rgb(66, 113, 175) 8px;
+    border:solid rgb(48, 209, 209) 8px;
     border-collapse: collapse;
    width: 100%;
    text-align: center;
+   font-size: 20px;
    text-size-adjust:inherit;
+   font-family:'Times New Roman', Times, serif;
 }
 
 h1{
-    color: rgb(23, 23, 150);
+    color: rgb(81, 28, 226);
     text-align: center;
-    font-size:  400%;
-    font-family: 'Times New Roman', Times, serif;
+    font-size:  600%;
+    font-family: 'Stint Ultra Condensed', cursive;
 }
 
+h2{
+
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+color: darkred;
+
+font-size:  400%;
+
+
+}
+#s{
+    text-align: center;
+}
 .logo{
     margin-left:32%;
     width: 450px;
@@ -30,33 +62,34 @@ h1{
     text-align:left;
     font-size:  300%;
     color: rgb(72, 182, 21);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Dancing Script', cursive;    
 
 }
 
 #Hours{
     border: 1px solid black;
 
-margin-bottom: 90px;
+    margin-bottom: 150px;
     text-align:center;
-    font-size: 150%;
-    color: rgb(72, 182, 21);
-    font-family: 'Times New Roman', Times, serif;
-}
+    font-size: 250%;
+    color: rgb(19, 185, 88);
+   
+    font-family: 'Dancing Script', cursive;}
 
 .Cities{
+margin-top: 100px;
     margin: 0;
     padding: 0;
     list-style-type: none;
-
+margin-bottom: 100px;
 
 }
 
 .Cities li{
     display: inline-block;
-    font-size:  150%;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 22px;
+   font-size: 70px;
+    padding: 25px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
 
 }
 .Cities li:hover{
@@ -65,57 +98,103 @@ margin-bottom: 90px;
 
 }
 
-p,a{
-   
-    color: darkgreen;
+
+
+#Galary {
+margin-top: -80px;
     margin-left: 0%;
-    font-size: 100%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 250%;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
     font-style: italic;
+    color: rgb(24, 223, 223);
+    text-align: center;
+    margin-bottom: 50px;;
 }
 
 .A img{
-    width: 90px;
-    height: 120px;
+    width: 150px;
+    height:240px;
     float: right;
+    margin-top:20px ;
 
 }
 
 .B img{
 
-    width: 90px;
-    height: 150px;
+    width: 120px;
+    height: 240px;
     float: left;
- 
+    margin-top:15px ;
 }
 
 .C img{
 
     width: 120px;
     height: 120px;
-    margin-left: 32%;
+    margin-left:27%;
     
 }
 
-footer {
 
-    padding: 60px;
-    background: rgb(235, 225, 225);
-    margin-top: 25px;
-    
+ .Contact{
 
-  }
-
-P,footer {
-
-    color: rgb(100, 0, 100);
+    color: rgb(8, 117, 160);
     font-size: 150%;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-style: bold;
     text-align: center;
+    margin-top: 100px;
 
 }
+
+.link{
+
+    text-align: center;
+    color: darkorange;
+   
+
+
+}
+.link p{
+
+    font-size: 75px;
+    
+    margin-top: 40px;
+    margin-bottom:10px;
+
+}
+.link a{
+    color: rgb(192, 26, 123);
+    font-size: 50px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 label{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
+    color: darkred;
+    font-size: 25px;
+}
+
+#minimumValue{
+
+    position:relative;
+}
+
+#CopyRights{
+
+
+    color: rgb(26, 224, 224);
+    font-size: 60px;
+    text-align: center;
+    margin-top: 100px;
+font-family: 'Limelight', cursive;
+
+}
+
+#location{
+
+   text-align: center;
+    font-size:50px;
 }
